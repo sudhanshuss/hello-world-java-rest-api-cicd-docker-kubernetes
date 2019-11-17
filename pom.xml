@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.sid.rest.webservices</groupId>
 	<artifactId>hello-world-java-rest-api-cicd-docker-kubernetes</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>hello-world-java-rest-api-cicd-docker-kubernetes</name>
 	<description>This is a hello world project for java rest api and integration with CICD, docker, kubernetes.</description>
 
