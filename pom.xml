@@ -46,7 +46,7 @@
 	<build>
 		<finalName>hello-world-java-rest-api-cicd-docker-kubernetes</finalName>
 		<plugins>
-			<plugin>
+	     <!--  		<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
@@ -68,7 +68,7 @@
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
-			</plugin>
+			</plugin>  -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
