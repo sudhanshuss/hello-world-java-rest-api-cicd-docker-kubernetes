@@ -16,6 +16,10 @@ pipeline {
                 sh 'mvn test' 
             }
         }
+	 stage('Initialize'){
+       		 def dockerHome = tool 'myDocker'
+        	env.PATH = "${dockerHome}/bin:${env.PATH}"
+         }    
  	stage("Docker build") {
      	    steps {
       		sh "docker build -t sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes ."
