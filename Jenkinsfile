@@ -16,11 +16,5 @@ pipeline {
                 sh 'mvn test' 
             }
         }  
-	stage("Docker push") {
-     	     steps {
-                 sh "docker login -u username -p password"
-                 sh "docker push nikhilnidhi/calculator_1"
-              }
-         }
     }		    
 }
