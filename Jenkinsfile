@@ -1,5 +1,10 @@
 pipeline {
-	agent any
+	agent {
+        docker {
+            image 'maven:3-alpine' 
+            args '-v /root/.m2:/root/.m2' 
+        }
+    }
     stages {
         stage('Build') {
             steps {
@@ -11,5 +16,10 @@ pipeline {
                 sh 'mvn test' 
             }
         }  
+ 	stage("Docker build") {
+     	    steps {
+      		sh "docker build -t sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes ."
+            }
+	}
     }		    
 }
