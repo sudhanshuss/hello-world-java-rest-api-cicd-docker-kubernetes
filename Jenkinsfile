@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+		sh 'mvn -Dmaven.repo.local=/home/ubuntu/m2_repo'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
