@@ -10,10 +10,14 @@ pipeline {
             steps {
                 sh 'mvn test' 
             }
-        }  
+        }
+	stage ('Linting') {
+	     steps {
+                sh 'hadolint Dockerfile' 
+            }
+	}
  	stage("Docker build") {
      	    steps {
-		sh 'hadolint Dockerfile'
       		sh "docker build -t sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes ."
             }
 	}
