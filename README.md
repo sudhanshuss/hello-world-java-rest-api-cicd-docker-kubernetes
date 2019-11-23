@@ -17,7 +17,7 @@ This is a spring boot hello world application.Integration with docker , jenkins 
     ```
    Apache Maven Environment Variables
     ```
-    MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
+    # MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
     export JAVA_HOME=<echo $JAVA_HOME>
     export M2_HOME=/opt/apache-maven
     export MAVEN_HOME=/opt/apache-maven
@@ -35,3 +35,12 @@ This is a spring boot hello world application.Integration with docker , jenkins 
    sudo apt-get install jenkins
    sudo usermod -aG docker jenkins
    ```
+5. Hadolint
+   ```
+   wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+   chmod +x /bin/hadolint
+   ```
+   
+ ##
+ References 
+ https://www.youtube.com/watch?v=TYfO26yc1EM&t=601s
