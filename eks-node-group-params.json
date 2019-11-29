@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "UdacityCapstoneProject"
+    },
+    {
+        "ParameterKey": "SshKey",
+        "ParameterValue": "ec2-aws-key-pair"
+    },
+    {
+        "ParameterKey":"DesiredInstances",
+        "ParameterValue": "2"
+    }
+]
