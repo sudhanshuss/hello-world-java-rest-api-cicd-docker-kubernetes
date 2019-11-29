@@ -1,4 +1,9 @@
 pipeline {
+    environment {
+    registry = "sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes"
+    registryCredential = ‘dockerhub’
+    dockerImage = ''
+  }
     agent any 
     stages {
         stage('Build') {
@@ -16,10 +21,21 @@ pipeline {
                 sh 'hadolint Dockerfile' 
             }
 	}
- 	stage("Docker build") {
-     	    steps {
-      		sh "docker build -t sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes ."
-            }
-	}
+ 	stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
+    stage('Deploy Image') {
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+      }
+    }
     }		    
 }
