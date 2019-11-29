@@ -1,7 +1,7 @@
 pipeline {
     environment {
     registry = "sudhanshuss/hello-world-java-rest-api-cicd-docker-kubernetes"
-    registryCredential = ‘dockerhub’
+    registryCredential = 'dockerhub'
     dockerImage = ''
   }
     agent any 
