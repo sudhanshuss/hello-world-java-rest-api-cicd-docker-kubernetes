@@ -38,7 +38,9 @@ pipeline {
       }
     }
      stage('Deploying') {
-      echo 'Deploying to AWS...'
+	steps{
+      		echo 'Deploying to AWS...'
+	}
     }
   }		    
 }
