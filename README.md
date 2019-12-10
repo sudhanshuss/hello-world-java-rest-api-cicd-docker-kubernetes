@@ -41,6 +41,9 @@ This is a spring boot hello world application.Integration with docker , jenkins 
    chmod +x /bin/hadolint
    ```
    
- ##
- References 
- https://www.youtube.com/watch?v=TYfO26yc1EM&t=601s
+ ## References 
+    https://www.youtube.com/watch?v=TYfO26yc1EM&t=601s
+    https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html
+    https://medium.com/@gustavo.guss/jenkins-building-docker-image-and-sending-to-registry-64b84ea45ee9
+    https://codeburst.io/getting-started-with-kubernetes-deploy-a-docker-container-with-kubernetes-in-5-minutes-eb4be0e96370
+    https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html
